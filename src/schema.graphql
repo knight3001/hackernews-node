@@ -4,6 +4,7 @@ type Query {
 }
 
 type Feed {
+  id: ID!
   links: [Link!]!
   count: Int!
 }
@@ -21,6 +22,7 @@ type Link {
   url: String!
   postedBy: User
   votes: [Vote!]!
+  createdAt: DateTime!
 }
 
 type AuthPayload {
@@ -56,3 +58,5 @@ enum Sort {
   asc
   desc
 }
+
+scalar DateTime
